@@ -6,6 +6,17 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
   <p> Claro que si </p>
+  
+  <p id="demo"></p>
+  <script>
+  document.getElementById("demo").innerHTML="Pagina web creada por THE NOTORIOUS " + prompt("Cómo te llamas?");
+  </script>
+  
+  <script type="text/javascript">// ya no hace falta poner el type pues javascript esta x defecto
+  alert("Bienvenido");
+  console.log("joder es verdad que 1=1");// este texto se ve en Console si pulsas F12
+  </script>
+  
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
