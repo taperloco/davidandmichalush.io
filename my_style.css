@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	background-image: url("fondoHover.jpg");
+	/*If the image is not available*/
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/*background-color: blue;*/
+	overflow: hidden;
+} 
+
+header {
+  text-align: center;
+  color: white;
+  background-color: darkslateblue;
+}
+
+menu {
+  height: 80%;	
+}
+
+footer {
+  display: block;
+  text-align: center;
+  color:  white;
+  background-color: darkslateblue;  
+}
+
+
+ul {
+  /*Get rid of the point before the text*/
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  /*Si los elementos sobresalen, se rellena*/  
+  overflow: hidden;
+  /*background-color:#F5F5F5;*/
+}
+
+li {
+  color: white;
+}
+
+#movimiento {
+  color: white;
+  position:relative;
+  animation: mymove 5s infinite;
+}
+
+#gif {
+  position: fixed;
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+  height:225px;
+  width:150px;
+  animation: mymove2 5s infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+button.menu {
+  background-color:transparent;
+  color:tomato;
+  padding:20px;
+  border:2px solid transparent;
+  /*display: block;*/
+
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+
+@keyframes mymove2 {
+  from {right: 0px;}
+  to {right: 100px;}
+}
+
+button.menu:hover {
+  /*background-color:tomato;*/
+  color:white;
+  border-bottom:2px dotted yellow;
+  transition: 1s;
+}
+
+
+/*
+  The default design of the website will be for mobile screens.
+  This will make the page display faster on smaller devices.
+*/
+/*Media query for tablets and medium devices*/
+@media only screen and (min-width:600px){
+  header {background-color: black;}
+  li {float:left;}
+  #gif {height:350px;width:235px;}
+}
+/*Media query for desktop*/
+@media only screen and (min-width:768px){
+header {background-color: rgba(255,99,71,0.4);}
+li {
+  float:left;
+  animation: mymove 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  }
+  
+  #gif {height:450px;width:300px;}
+  
+}
