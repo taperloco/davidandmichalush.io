@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	margin:0;
+	background-image: url("fondoHover.jpg");
+	/*If the image is not available*/
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/*background-color: blue;*/
+	overflow: hidden;
+} 
+
+header {
+  height: 15%;
+  margin: 0;
+  text-align: center;
+  color: white;
+  background-color: rgba(255,99,71,0.4);
+}
+
+menu {
+  height:70%;
+  width: 70%;
+  padding: 5% 5% 5% 5%;
+  background-color: rgba(255,255,255,0.1);
+}
+
+footer {
+  height: 15%;
+  margin: 0;
+  display: block;
+  text-align: center;
+  color:  white;
+  background-color: rgba(0,100,255,0.5);  
+}
+
+
+ul {
+  margin: 0;
+  padding-left: 0px;
+  /*Get rid of the point before the text*/
+  list-style-type:none;
+  /*Si los elementos sobresalen, se rellena*/  
+  overflow: hidden;
+  /*background-color:#F5F5F5;*/
+}
+
+li {
+  margin: 0;
+  color: white;
+  float: left;
+  width: 50%;
+  height: 33%;
+  padding: auto;
+}
+
+#gif {
+  position: fixed;
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+  height:225px;
+  width:150px;
+  animation: mymove1 5s infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#gif:hover {
+  cursor: crosshair;
+}
+
+
+button.menu {
+  background-color:transparent;
+  color: white;
+  height: 80%;
+  width: 80%;
+  margin-left: 10%;
+  overflow: hidden;
+  border:2px solid rgba(0,100,255,0.5);
+  /*display: block;*/
+
+}
+
+@keyframes mymove1 {
+  from {right: -250px;}
+  to {right: -0px;}
+}
+
+@keyframes mymove2 {
+  from {right: -200px;}
+  to {right: 50px;}
+}
+
+button.menu:hover {
+  background-color:blue;
+  color:white;
+  border:2px outline slateblue;
+  transition: 1s;
+}
+
+
+/*
+  The default design of the website will be for mobile screens.
+  This will make the page display faster on smaller devices.
+*/
+/*Media query for tablets and medium devices*/
+@media only screen and (min-width:600px){
+  header {background-color: black;}
+  li {float:left;}
+  #gif {height:350px;width:235px;
+  animation: mymove2 5s 1 forwards;}
+}
+/*Media query for desktop*/
+@media only screen and (min-width:768px){
+header {background-color: rgba(0,100,255,0.5);}
+li {float:left;}
+  #gif {height:450px;width:300px;
+  animation: mymove2 5s 1 forwards;}
+  
+}
+
