@@ -39,37 +39,60 @@
   <p><strong>David González</strong> - Webpage Projekt</p>
 </header>
 
-<menu>
+<menu id="menusito">
 <!--One of the uses of lists is to create horizontal menus. Take a look in the CSS code-->
 <ul>
-  <li><button id="botoncin" onclick="mifuncion()" class="menu">WhoAmI</button></li>
-  <li><button onclick="" class="menu">Intesests</button></li>
+  <li><button class="menu">WhoAmI</button></li>
+  <li><button onclick="mifuncion2()" class="menu">Intesests</button></li>
   <li><button onclick="" class="menu">Proyects</button></li>
-  <li><button onclick="" class="menu">Quotes</button></li>
-  <li><button onclick="" class="menu">Learn German</button></li>
+  <li><button onclick="mifuncion3()" class="menu">Restart animation.Quotes</button></li>
+  <li><button onclick="mifuncion()" class="menu">PULSA PARA TEXTO ALEMAN</button></li>
+  <li><button id="cambio" class="menu" style="border:none;font-size:2em;">WILLKOMMEN</button></li>
 </ul>
-<p id="cambio" style="font-size:1em;color:green;"></p>
-<img id="gif" src="gifi.gif" alt="Por lo que sea no se ve">
+
+<img id="gif" onclick="mifuncion3()" src="gifi.gif" alt="Por lo que sea no se ve" />
 <!--<img id="fondo" src="fondoHover.jpg" alt="Por lo que sea no se ve" style="height:100%;margin:auto">-->
 </menu>
 
 <footer>
-  <p><strong>David González</strong> - Webpage Projekt </p>
+  <p><strong>Powered by:</strong> - Github Berlin</p>
 </footer>
 
 
 <script>
 function mifuncion(){
-  document.getElementById("botoncin").style.color="Blue";
   var y = document.getElementById("cambio");
-  if(y.innerHTML=="cambiaso de me premoh"){
-  y.innerHTML = "";
+  if(y.style.display=="none"){
+  y.style.display = "inline";
   }
   else{
-  y.innerHTML = "cambiaso de me premoh";
+  y.style.display = "none";
   }
 }
 </script>
+
+<script>
+function mifuncion2(){
+  var x = document.getElementById("menusito");
+  x.style.backgroundColor = "rgba(255,255,255,0.5)";
+}
+
+function mifuncion3(){
+  var x = document.getElementById("gif");
+  if(x.style.display=="none"){
+  x.style.display = "inline";
+  }
+  else{
+  x.style.display = "none";
+  }
+  
+}
+
+</script>
+
+
+
+
 
 <!--<script>
   function mifuncion() {
